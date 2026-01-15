@@ -1,0 +1,6 @@
+const MAX_RETRIES=5
+const INITIAL_DELAY_MS = 1000;
+export{
+    MAX_RETRIES,
+    INITIAL_DELAY_MS
+}
