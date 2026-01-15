@@ -48,4 +48,4 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: sujaladhikari/document-scanner:latest
+          tags: sujal900/document_scanner:latest
