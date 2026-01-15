@@ -9,3 +9,4 @@ COPY . .
 RUN npm run build --if-present
 
 CMD ["npm", "start"]
+
