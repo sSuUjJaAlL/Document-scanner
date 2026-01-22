@@ -16,7 +16,6 @@ async function givebase(filepath:string){
         stream.on('error',(err)=>{
             reject(err)})
         })
-    
-    
+        
 }  
 export default givebase

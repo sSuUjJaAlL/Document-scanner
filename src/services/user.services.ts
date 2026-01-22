@@ -1,4 +1,5 @@
 import tesseract from "../helper/tesseract.helper"
+import citizenshipMapper from "../mappers/response.mapper"
 import modelResponseMapper from "../mappers/response.mapper"
 import UserRepository from "../repository/user.repositry"
 import givebase from "../utils/base64.utils"
@@ -18,17 +19,16 @@ async function uploadfileService(filepath:string){
     }
 } 
 async function uploadfileServiceAndAnalyze(filepath:string){
-    const file= await givebase(filepath)
+    //const file= await givebase(filepath)
 
     const savetodb = await tesseract(filepath)
-    const response = modelResponseMapper(savetodb)
+    const response = citizenshipMapper(savetodb)
        return{
-        data:savetodb,
+        data:response,
         message:'SAved'
     }
 } 
 export{
     uploadfileService,
-    uploadfileServiceAndAnalyze
-    
+    uploadfileServiceAndAnalyze    
 }
