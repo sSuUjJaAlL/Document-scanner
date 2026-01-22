@@ -11,6 +11,7 @@ postRouter.post('/post',
 postRouter.post('/analyze',
     upload.single('image'),
     postControllerOfImage
+    //This is new comment
 )
 
 export default postRouter
